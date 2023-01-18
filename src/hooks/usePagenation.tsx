@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { callApi } from '../api/api';
-import { getAllList, getList } from '../redux/commentSlice';
+import {  getAllList, getList } from '../redux/commentSlice';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 
 export default function usePagenation() {
@@ -17,13 +17,12 @@ export default function usePagenation() {
   }
 
   useEffect(() => {
-    callApi.getList().then((res) => setMaxPage(Math.ceil(res.data.length / 4)));
-    // dispatch(getAllList());
-    dispatch(getList(focusNum));
-    // setMaxPage(Maxlength / 4);
-    console.log(Maxlength);
-    console.log("calling maxpage")
-  }, [focusNum]);
+    async function fetchMaxData() {
+      await dispatch(getAllList());
+      setMaxPage(Math.ceil(Maxlength / 4));
+    }
+    fetchMaxData();
+  }, [focusNum, Maxlength]);
 
   return { focusNum, maxPage, handleClick }
 }

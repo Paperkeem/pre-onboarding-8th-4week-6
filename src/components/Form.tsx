@@ -14,16 +14,12 @@ export default function Form({ form, setForm, focusNum, handleClick }: FoProps) 
 
    const handleSubmit = (e: any) => {
       e.preventDefault();
-      // form.id ? dispatch(updateComment(form)) : dispatch(addComment(form));
       if (form.id) {
          dispatch(updateList(form));
          dispatch(getList(focusNum));
-         // dispatch(getList());
       } else {
-         // dispatch(addComment(form));
          dispatch(addList(form));
          dispatch(getList(focusNum));
-         // dispatch(getList());
          handleClick(1);
       }
       setForm({ profile_url: "https://picsum.photos/id/1/50/50", createdAt: "2020-05-30" });

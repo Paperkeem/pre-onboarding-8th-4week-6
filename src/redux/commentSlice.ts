@@ -1,6 +1,5 @@
 import { callApi } from './../api/api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
 import { CommentState, IniState } from '../type/type';
 
 interface CommentError {
