@@ -2,8 +2,7 @@ import { CommentState } from './../type/type.d';
 import axios from 'axios';
 
 const instance = axios.create({
-  // baseURL: "https://week4-json.vercel.app",
-  baseURL: "https://week-4-6-json.herokuapp.com",
+  baseURL: process.env.REACT_APP_URL,
 });
 
 export const callApi = {
