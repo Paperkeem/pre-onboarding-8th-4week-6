@@ -9,7 +9,7 @@ export interface CommentState {
 export interface PageProps {
   focusNum: number;
   maxPage: number;
-  handleClick: (page: number, e?: any) => void;
+  handlePagination: (page: number, e?: any) => void;
 }
 
 export interface CProps extends PageProps {

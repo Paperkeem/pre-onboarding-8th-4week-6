@@ -116,7 +116,7 @@
       "id": 18,
       "profile_url": "https://picsum.photos/id/18/50/50",
       "author": "abc_18",
-      "content": "local storage는 언제 사용하는게 좋나요?",
+      "content": "local storage는 언제 사용하는게 좋나요",
       "createdAt": "2022-03-18"
     },
     {
@@ -132,6 +132,34 @@
       "author": "abc_20",
       "content": "Form 처리는 어떻게 하면 깔끔할까요",
       "createdAt": "2022-03-20"
+    },
+    {
+      "profile_url": "https://picsum.photos/id/1/50/50",
+      "createdAt": "2020-05-30",
+      "author": "김통깨",
+      "content": "코틀린 아시는 분?",
+      "id": 21
+    },
+    {
+      "profile_url": "https://picsum.photos/id/1/50/50",
+      "createdAt": "2023-01-18",
+      "author": "귕기",
+      "content": "킹킹킹킹킹이야",
+      "id": 23
+    },
+    {
+      "profile_url": "https://picsum.photos/id/1/50/50",
+      "createdAt": "2023-01-17",
+      "content": "쾡",
+      "author": "앙뚜",
+      "id": 24
+    },
+    {
+      "profile_url": "https://picsum.photos/id/1/50/50",
+      "createdAt": "2020-05-30",
+      "author": "앙뚜",
+      "content": "1q2w3e4r! 라이라이 차차차!",
+      "id": 25
     }
   ]
 }

@@ -1,24 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import { addComment, updateComment } from '../redux/commentSlice';
-import { useAppDispatch } from '../redux/hooks';
-import { CommentState, FoProps } from '../type/type';
+import { addComment, updateComment } from "../redux/commentSlice";
+import { useAppDispatch } from "../redux/hooks";
 
-export default function Form({form, setForm, handleClick}: FoProps) {
+import type { CommentState, FoProps } from "../type/type";
+
+export default function Form({ form, setForm, handlePagination }: FoProps) {
   const dispatch = useAppDispatch();
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.currentTarget;
     setForm((form: CommentState) => ({ ...form, [name]: value }));
-  }
-  
-  const handleSubmit = (e: any) => {
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     form.id ? dispatch(updateComment(form)) : dispatch(addComment(form));
-    setForm({ profile_url: "https://picsum.photos/id/1/50/50", createdAt: "2020-05-30" });
-    handleClick(1);
-  }
-  
+    setForm({
+      profile_url: "https://picsum.photos/id/1/50/50",
+      createdAt: "2020-05-30",
+    });
+    handlePagination(1);
+  };
+
   return (
     <FormStyle>
       <form onSubmit={handleSubmit}>
@@ -34,23 +40,25 @@ export default function Form({form, setForm, handleClick}: FoProps) {
           type="text"
           name="author"
           placeholder="작성자"
-          value={form.author || ''}
+          value={form.author || ""}
           onChange={handleChange}
         />
         <br />
         <textarea
           name="content"
           placeholder="내용"
-          value={form.content || ''}
+          value={form.content || ""}
           onChange={handleChange}
-          required></textarea>
+          required
+        />
         <br />
         <input
           type="text"
           name="createdAt"
-          value="2020-05-30"
+          value={form.createdAt || ""}
           onChange={handleChange}
-          required />
+          required
+        />
         <br />
         <button type="submit">등록</button>
       </form>
