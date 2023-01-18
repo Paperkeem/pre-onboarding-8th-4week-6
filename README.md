@@ -1,11 +1,29 @@
 # 📝 댓글 CRUD with Redux
 
-## 📌 구현
-#### 🗓 구현 일정 : 2023.01.16 - 01.17
+## 📌 [배포 사이트](https://pre-onboarding-8th-4week-6.netlify.app/)
 
 </br>
 
-## 목차
+## Team
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/TaeTaehoon"><img src="https://user-images.githubusercontent.com/107424974/212338752-939b2522-7b0a-4e7c-9ef4-85d957ec8f7c.jpeg" width="100px;" alt=""/><br /><sub><b>강태훈</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Tenykim1109"><img src="https://user-images.githubusercontent.com/107424974/212338696-72b9433d-2ed5-4954-b9ce-ef444aa662eb.jpeg" width="100px;" alt=""/><br /><sub><b>김민정</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Paperkeem"><img src="https://user-images.githubusercontent.com/107424974/212338824-fc8fd767-7ed3-4600-9596-7665f823be03.jpeg" width="100px;" alt=""/><br /><sub><b>김종이</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/sanghyun-lee2"><img src="https://user-images.githubusercontent.com/107424974/212338676-3e3b273b-5860-4eed-b971-1a26a9572e74.png" width="100px;" alt=""/><br /><sub><b>이상현</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/LEE-YO-HAN"><img src="https://user-images.githubusercontent.com/107424974/212338768-2d0c7044-dc9e-4379-b9a9-bd7252e13287.png" width="100px;" alt=""/><br /><sub><b>이요한</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/rlorxl"><img src="https://user-images.githubusercontent.com/107424974/212338810-22a9d6cf-8073-45f5-a45a-a1025011d445.jpeg" width="100px;" alt=""/><br /><sub><b>이조은</b></sub></a><br /></td>
+    </tr>
+  </tbody>
+</table>
+
+#### 🗓 일정 : 2023.01.16 - 01.19
+
+</br>
+
+## 목차: [기능 구현 위키](https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/wiki)
 
 1. [프로젝트 실행 방법](#프로젝트-실행-방법)
 2. [구현사항](#구현사항)
@@ -27,7 +45,11 @@ npx json-server ./data.json --port 4000
 ```
 
 ```bash
-# 로컬 서버에서 실행
+REACT_APP_URL="http://localhost:4000"
+```
+
+```bash
+# 로컬 실행
 npm start
 ```
 
