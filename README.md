@@ -23,7 +23,7 @@
 
 </br>
 
-## 목차: [기능 구현 위키](https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/wiki)
+## 목차
 
 1. [프로젝트 실행 방법](#프로젝트-실행-방법)
 2. [구현사항](#구현사항)
