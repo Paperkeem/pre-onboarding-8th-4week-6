@@ -26,7 +26,6 @@ export default function Form({ form, setForm, focusNum, handleClick }: FoProps) 
          // dispatch(getList());
       }
       setForm({ profile_url: "https://picsum.photos/id/1/50/50", createdAt: "2020-05-30" });
-      handleClick(1);
    };
 
    return (
