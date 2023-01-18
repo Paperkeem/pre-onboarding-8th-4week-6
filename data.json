@@ -81,7 +81,7 @@
       "id": 13,
       "profile_url": "https://picsum.photos/id/13/50/50",
       "author": "abc_13",
-      "content": "주변에 React 개발자 있나요??",
+      "content": "주변에 React 개발자 있나요~",
       "createdAt": "2022-03-13"
     },
     {
@@ -90,13 +90,6 @@
       "author": "abc_14",
       "content": "Next.js 가이드 주세요?",
       "createdAt": "2022-03-14"
-    },
-    {
-      "id": 15,
-      "profile_url": "https://picsum.photos/id/15/50/50",
-      "author": "abc_15",
-      "content": "vue vs react 뭐가 좋나요.",
-      "createdAt": "2022-03-15"
     },
     {
       "id": 16,
@@ -123,7 +116,7 @@
       "id": 19,
       "profile_url": "https://picsum.photos/id/19/50/50",
       "author": "abc_19",
-      "content": "막히면 대답은 빨리 해주나요",
+      "content": "막히면 대답은 빨리 해주나요???",
       "createdAt": "2022-03-19"
     },
     {
@@ -132,6 +125,20 @@
       "author": "abc_20",
       "content": "Form 처리는 어떻게 하면 깔끔할까요",
       "createdAt": "2022-03-20"
+    },
+    {
+      "profile_url": "https://picsum.photos/id/1/50/50",
+      "createdAt": "2020-05-30",
+      "author": "🗓",
+      "content": "일정 관리",
+      "id": 21
+    },
+    {
+      "profile_url": "https://picsum.photos/id/1/50/50",
+      "createdAt": "2020-05-30",
+      "author": "🔥",
+      "content": "체력 관리 중요!!",
+      "id": 22
     }
   ]
 }

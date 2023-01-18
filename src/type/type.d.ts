@@ -6,6 +6,11 @@ export interface CommentState {
   createdAt?: string;
 }
 
+export interface IniState {
+  comment: CommentState[];
+  maxNum: number;
+}
+
 export interface PageProps {
   focusNum: number;
   maxPage: number;

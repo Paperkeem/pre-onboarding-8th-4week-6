@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { addComment, updateComment } from '../redux/commentSlice';
+import { addList, getList, updateList } from '../redux/commentSlice';
 import { useAppDispatch } from '../redux/hooks';
 import { CommentState, FoProps } from '../type/type';
 
-export default function Form({form, setForm, handleClick}: FoProps) {
+export default function Form({form, setForm, focusNum, handleClick}: FoProps) {
   const dispatch = useAppDispatch();
 
   const handleChange = (e: any) => {
@@ -14,7 +14,17 @@ export default function Form({form, setForm, handleClick}: FoProps) {
   
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    form.id ? dispatch(updateComment(form)) : dispatch(addComment(form));
+    // form.id ? dispatch(updateComment(form)) : dispatch(addComment(form));
+    if (form.id) {
+      dispatch(updateList(form));
+      dispatch(getList(focusNum));
+      // dispatch(getList());
+    } else {
+      // dispatch(addComment(form));
+      dispatch(addList(form));
+      dispatch(getList(focusNum));
+      // dispatch(getList());
+    }
     setForm({ profile_url: "https://picsum.photos/id/1/50/50", createdAt: "2020-05-30" });
     handleClick(1);
   }
