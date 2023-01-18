@@ -77,10 +77,9 @@ export const commentSlice = createSlice({
     builder.addCase(updateList.fulfilled, (state, { payload }) => {
       const index = state.comment.findIndex(item => item.id == payload.id);
       if (payload.id) state.comment.splice(index, 1, payload);
-
     });
     builder.addCase(delList.fulfilled, (state, action) => {
-;     const index = action.meta.arg;
+      const index = action.meta.arg;
       const NewState = state.comment.filter(state => state.id != index);
       state.comment = NewState;
       state.maxNum -= 1;
