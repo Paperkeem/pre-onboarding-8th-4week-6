@@ -63,7 +63,11 @@ npm start
 
 ## 구현사항
 
-1. 댓글 CRUD 기능 구현
+1. redux를 사용해서 비동기 처리 - 댓글 CRUD
+
+https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/ace0e8dc435c18c60dfe93b10895d564ef545cdc/src/redux/commentSlice.ts#L59-L88
+
+ - 비동기 처리 댓글 CRUD는 createAsyncThunk를 사용해 구현했습니다.
 
 </br>
 
