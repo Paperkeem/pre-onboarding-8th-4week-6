@@ -1,17 +1,21 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { deleteComment, getList } from '../redux/commentSlice';
+import { delList, getList } from '../redux/commentSlice';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { CProps } from '../type/type';
 
-export default function CommentList({ handleUpdate, handleClick }: CProps) {
+export default function CommentList({ handleUpdate, handleClick, focusNum }: CProps) {
   const dispatch = useAppDispatch();
-  const comment = useAppSelector((state) => state.comment);
+  const comment = useAppSelector((state) => state.comment.comment);
   
-  useEffect(() => { dispatch(getList()) }, []);
+  useEffect(() => {
+    dispatch(getList());
+    console.log("api calling");
+  }, []);
 
   const handleDelete = (id: number) => {
-    dispatch(deleteComment(id));
+    dispatch(delList(id));
+    dispatch(getList(focusNum));
     handleClick(1);
   };
 
