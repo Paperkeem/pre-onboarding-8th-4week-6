@@ -63,7 +63,7 @@ npm start
 
 ## 구현사항
 
-####1. redux를 사용해서 비동기 처리 - 댓글 CRUD
+#### 1. redux를 사용해서 비동기 처리 - 댓글 CRUD
 
 https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/ace0e8dc435c18c60dfe93b10895d564ef545cdc/src/redux/commentSlice.ts#L59-L88
 https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/redux/store.ts#L7-L13
@@ -73,7 +73,7 @@ https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511
 
 </br>
 
-####2. 페이지네이션
+#### 2. 페이지네이션
 
 https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/hooks/usePagenation.tsx#L19-L25
 https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/components/PageList.tsx#L8-L21
@@ -83,7 +83,7 @@ https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511
 
 </br>
 
-####3. 댓글 작성, 수정, 삭제 후 동작
+#### 3. 댓글 작성, 수정, 삭제 후 동작
 
 https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/components/Form.tsx#L15-L26
 https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/hooks/usePagenation.tsx#L13-L17
