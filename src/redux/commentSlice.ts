@@ -63,7 +63,6 @@ export const commentSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getAllList.fulfilled, (state, action) => {
-      console.log(action);
       state.maxNum = action.payload.length;
     });
     builder.addCase(getList.fulfilled, (state, action) => {
