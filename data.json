@@ -4,7 +4,7 @@
       "id": 2,
       "profile_url": "https://picsum.photos/id/2/50/50",
       "author": "abc_2",
-      "content": "막히면 대답은 빨리 해주나요",
+      "content": "막히면 대답은 빨리 해주나요ㅇㅇㅇㅇ",
       "createdAt": "2022-03-02"
     },
     {
@@ -32,7 +32,7 @@
       "id": 6,
       "profile_url": "https://picsum.photos/id/6/50/50",
       "author": "abc_6",
-      "content": "React 소스 배포는 보통 어떤식으로 하나요?",
+      "content": "React 소스 배포는 보통 어떤식으로 하나요?ㅇㅇㅇ",
       "createdAt": "2022-03-06"
     },
     {
@@ -46,7 +46,7 @@
       "id": 8,
       "profile_url": "https://picsum.photos/id/8/50/50",
       "author": "abc_8",
-      "content": "Typescript 배워 보려고 합니다. 어떻게 배우는게 빠를까요",
+      "content": "Typescript 배워 보려고 합니다. 어떻게 배우는게 빠를까요??",
       "createdAt": "2022-03-08"
     },
     {
@@ -88,15 +88,8 @@
       "id": 14,
       "profile_url": "https://picsum.photos/id/14/50/50",
       "author": "abc_14",
-      "content": "Next.js 가이드 주세요?",
+      "content": "Next.js 가이드 주세요???????",
       "createdAt": "2022-03-14"
-    },
-    {
-      "id": 16,
-      "profile_url": "https://picsum.photos/id/16/50/50",
-      "author": "abc_16",
-      "content": "Atomic 디자인은 무엇인가요?",
-      "createdAt": "2022-03-16"
     },
     {
       "id": 17,
@@ -104,20 +97,6 @@
       "author": "abc_17",
       "content": "UI 테스트는 어떻게 진행하나요",
       "createdAt": "2022-03-17"
-    },
-    {
-      "id": 18,
-      "profile_url": "https://picsum.photos/id/18/50/50",
-      "author": "abc_18",
-      "content": "local storage는 언제 사용하는게 좋나요?",
-      "createdAt": "2022-03-18"
-    },
-    {
-      "id": 19,
-      "profile_url": "https://picsum.photos/id/19/50/50",
-      "author": "abc_19",
-      "content": "막히면 대답은 빨리 해주나요???",
-      "createdAt": "2022-03-19"
     },
     {
       "id": 20,
@@ -130,15 +109,36 @@
       "profile_url": "https://picsum.photos/id/1/50/50",
       "createdAt": "2020-05-30",
       "author": "🗓",
-      "content": "일정 관리",
+      "content": "일정 관리ㅇㅇㅇㅇ",
       "id": 21
     },
     {
       "profile_url": "https://picsum.photos/id/1/50/50",
       "createdAt": "2020-05-30",
       "author": "🔥",
-      "content": "체력 관리 중요!!",
+      "content": "체력 관리 중요!!ㅇㅇ",
       "id": 22
+    },
+    {
+      "profile_url": "https://picsum.photos/id/1/50/50",
+      "createdAt": "2020-05-30",
+      "author": "ㅇㅇ",
+      "content": "ㅇㅇ",
+      "id": 25
+    },
+    {
+      "profile_url": "https://picsum.photos/id/1/50/50",
+      "createdAt": "2020-05-30",
+      "author": "ㅇㅇ",
+      "content": "ㅇㅇ",
+      "id": 26
+    },
+    {
+      "profile_url": "https://picsum.photos/id/1/50/50",
+      "createdAt": "2020-05-30",
+      "author": "ㅇㅇ",
+      "content": "ㅇㅇ",
+      "id": 27
     }
   ]
 }
