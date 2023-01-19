@@ -1,21 +1,29 @@
 import styled from "styled-components";
-import { PageProps } from '../type/type';
+
+import type { PageProps } from "../type/type";
 
 type StProps = {
   isFocus: boolean;
-}
+};
 
-export default function PageList({focusNum, maxPage, handleClick}: PageProps) {
-  const pageArray = [];
-  for (let i = 1; i <= maxPage; i++){
+export default function PageList({
+  focusNum,
+  maxPage,
+  handlePagination,
+}: PageProps) {
+  const pageArray: JSX.Element[] = [];
+
+  Array.from({ length: maxPage }, (_, i) => i + 1).forEach((page) =>
     pageArray.push(
       <Page
-        key={i}
-        isFocus={focusNum == i ? true : false}
-        onClick={(e) => handleClick(i, e)}
-      >{i}
-      </Page>);
-  }
+        key={page}
+        isFocus={focusNum === page ? true : false}
+        onClick={(e) => handlePagination(page, e)}
+      >
+        {page}
+      </Page>
+    )
+  );
 
   return <PageListStyle>{pageArray}</PageListStyle>;
 }
@@ -32,6 +40,6 @@ const Page = styled.button<StProps>`
   line-height: 1.5;
   border: 1px solid lightgray;
   margin-right: 3px;
-  color: ${props=>(props.isFocus ? 'white' : 'black')};
-  background-color: ${props=>(props.isFocus ? 'gray' : 'white')};
+  color: ${(props) => (props.isFocus ? "white" : "black")};
+  background-color: ${(props) => (props.isFocus ? "gray" : "white")};
 `;

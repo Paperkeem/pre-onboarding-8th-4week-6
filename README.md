@@ -23,7 +23,7 @@
 
 </br>
 
-## 목차: [기능 구현 위키](https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/wiki)
+## 목차
 
 1. [프로젝트 실행 방법](#프로젝트-실행-방법)
 2. [구현사항](#구현사항)
@@ -63,15 +63,31 @@ npm start
 
 ## 구현사항
 
-1. 댓글 CRUD 기능 구현
+#### 1. redux를 사용해서 비동기 처리 - 댓글 CRUD
+
+https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/ace0e8dc435c18c60dfe93b10895d564ef545cdc/src/redux/commentSlice.ts#L59-L88
+https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/redux/store.ts#L7-L13
+
+ - 비동기 처리 댓글 CRUD는 Redux createAsyncThunk를 사용해 구현했습니다.
+ - Redux logger, Redux-Devtools 설정하였습니다.
 
 </br>
 
-2. 페이지네이션
+#### 2. 페이지네이션
+
+https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/hooks/usePagenation.tsx#L19-L25
+https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/components/PageList.tsx#L8-L21
+
+ - 페이지네이션은 useEffect 내 async await를 사용하여 처리했습니다.
+ - 총 댓글수를 비동기로 받아와 응답값을 이용해 계산, 한 페이지당 4개씩 게시글을 호출했습니다.
 
 </br>
 
-3. 댓글 작성, 수정, 삭제 후 동작
+#### 3. 댓글 작성, 수정, 삭제 후 동작
+
+https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/components/Form.tsx#L15-L26
+https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/hooks/usePagenation.tsx#L13-L17
+
    - 댓글 작성하고 난 뒤: 다른 페이지에 위치하고 있었더라도 1페이지로 이동, 입력 폼 초기화
    - 댓글 수정하고 난 뒤: 현재 보고있는 페이지 유지, 입력 폼 초기화
    - 삭제하고 난 뒤: 1페이지로 이동
