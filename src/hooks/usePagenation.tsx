@@ -1,20 +1,22 @@
-import { useEffect, useState } from 'react';
-import { callApi } from '../api/api';
-import {  getAllList, getList } from '../redux/commentSlice';
-import { useAppDispatch, useAppSelector } from '../redux/hooks';
+import { useEffect, useState } from "react";
+import { getAllList, getList } from "../redux/commentSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
 export default function usePagenation() {
   const [maxPage, setMaxPage] = useState(0);
   const [focusNum, setFocusNum] = useState(1);
-  
-  const Maxlength = useAppSelector(state => state.comment.maxNum);
+
+  const Maxlength = useAppSelector((state) => state.comment.maxNum);
   const dispatch = useAppDispatch();
-  
-  const handleClick = (page: number, e?: any) => {
-    if (e) setFocusNum(e.target.textContent);
-    else if (e === undefined) setFocusNum(1);
+
+  const handlePagination = (
+    page: number,
+    e?: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    if (e) setFocusNum(Number(e.currentTarget?.textContent));
+    else setFocusNum(1);
     dispatch(getList(page));
-  }
+  };
 
   useEffect(() => {
     async function fetchMaxData() {
@@ -24,5 +26,5 @@ export default function usePagenation() {
     fetchMaxData();
   }, [focusNum, Maxlength]);
 
-  return { focusNum, maxPage, handleClick }
+  return { focusNum, maxPage, handlePagination };
 }

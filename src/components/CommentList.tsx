@@ -1,13 +1,18 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { delList, getList } from '../redux/commentSlice';
-import { useAppDispatch, useAppSelector } from '../redux/hooks';
-import { CProps } from '../type/type';
+import { delList, getList } from "../redux/commentSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
-export default function CommentList({ handleUpdate, handleClick, focusNum }: CProps) {
+import type { CommentState, CProps } from "../type/type";
+
+export default function CommentList({
+  handleUpdate,
+  handlePagination,
+  focusNum,
+}: CProps) {
   const dispatch = useAppDispatch();
   const comment = useAppSelector((state) => state.comment.comment);
-  
+
   useEffect(() => {
     dispatch(getList());
     console.log("api calling");
@@ -16,12 +21,12 @@ export default function CommentList({ handleUpdate, handleClick, focusNum }: CPr
   const handleDelete = (id: number) => {
     dispatch(delList(id));
     dispatch(getList(focusNum));
-    handleClick(1);
+    handlePagination(1);
   };
 
   return (
     <>
-      {comment?.map((comment:any, key:number) => (
+      {comment?.map((comment: CommentState, key: number) => (
         <Comment key={key}>
           <img src={comment.profile_url} alt="" />
 
@@ -32,8 +37,8 @@ export default function CommentList({ handleUpdate, handleClick, focusNum }: CPr
           <Content>{comment.content}</Content>
 
           <Button>
-            <button onClick={()=>handleUpdate(comment.id)}>수정</button>
-            <button onClick={()=>handleDelete(comment.id)}>삭제</button>
+            <button onClick={() => handleUpdate(comment.id!)}>수정</button>
+            <button onClick={() => handleDelete(comment.id!)}>삭제</button>
           </Button>
 
           <hr />
