@@ -2,7 +2,7 @@ import { CommentState } from "./../type/type.d";
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://thingkh-bk.shop:5000",
+  baseURL: process.env.REACT_APP_URL,
 });
 
 export const callApi = {

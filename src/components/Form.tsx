@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { addComment, updateComment } from "../redux/commentSlice";
+import { addList, getList, updateList } from "../redux/commentSlice";
 import { useAppDispatch } from "../redux/hooks";
+import { CommentState, FoProps } from "../type/type";
 
-import type { CommentState, FoProps } from "../type/type";
-
-export default function Form({ form, setForm, handlePagination }: FoProps) {
+export default function Form({
+  form,
+  setForm,
+  focusNum,
+  handlePagination,
+}: FoProps) {
   const dispatch = useAppDispatch();
 
   const handleChange = (
@@ -17,12 +21,18 @@ export default function Form({ form, setForm, handlePagination }: FoProps) {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    form.id ? dispatch(updateComment(form)) : dispatch(addComment(form));
+    if (form.id) {
+      dispatch(updateList(form));
+      dispatch(getList(focusNum));
+    } else {
+      dispatch(addList(form));
+      dispatch(getList(focusNum));
+      handlePagination(1);
+    }
     setForm({
       profile_url: "https://picsum.photos/id/1/50/50",
       createdAt: "2020-05-30",
     });
-    handlePagination(1);
   };
 
   return (
@@ -50,7 +60,7 @@ export default function Form({ form, setForm, handlePagination }: FoProps) {
           value={form.content || ""}
           onChange={handleChange}
           required
-        />
+        ></textarea>
         <br />
         <input
           type="text"
