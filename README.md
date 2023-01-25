@@ -76,7 +76,7 @@ https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511
 #### 2. 페이지네이션
 
 https://github.com/Paperkeem/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/hooks/usePagenation.tsx#L19-L25
-https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/components/PageList.tsx#L8-L21
+https://github.com/Paperkeem/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/components/PageList.tsx#L8-L21
 
  - 페이지네이션은 useEffect 내 async await를 사용하여 처리했습니다.
  - 총 댓글수를 비동기로 받아와 응답값을 이용해 계산, 한 페이지당 4개씩 게시글을 호출했습니다.
