@@ -65,7 +65,7 @@ npm start
 
 #### 1. redux를 사용해서 비동기 처리 - 댓글 CRUD
 
-https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/ace0e8dc435c18c60dfe93b10895d564ef545cdc/src/redux/commentSlice.ts#L59-L88
+https://github.com/Paperkeem/pre-onboarding-8th-4week-6/blob/ace0e8dc435c18c60dfe93b10895d564ef545cdc/src/redux/commentSlice.ts#L59-L88
 https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/redux/store.ts#L7-L13
 
  - 비동기 처리 댓글 CRUD는 Redux createAsyncThunk를 사용해 구현했습니다.
@@ -75,7 +75,7 @@ https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511
 
 #### 2. 페이지네이션
 
-https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/hooks/usePagenation.tsx#L19-L25
+https://github.com/Paperkeem/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/hooks/usePagenation.tsx#L19-L25
 https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/components/PageList.tsx#L8-L21
 
  - 페이지네이션은 useEffect 내 async await를 사용하여 처리했습니다.
@@ -85,8 +85,8 @@ https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511
 
 #### 3. 댓글 작성, 수정, 삭제 후 동작
 
-https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/components/Form.tsx#L15-L26
-https://github.com/wanted-onboarding8-6/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/hooks/usePagenation.tsx#L13-L17
+https://github.com/Paperkeem/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/components/Form.tsx#L15-L26
+https://github.com/Paperkeem/pre-onboarding-8th-4week-6/blob/f7b27511f02a502f82f39d79d58a417ba7bc3314/src/hooks/usePagenation.tsx#L13-L17
 
    - 댓글 작성하고 난 뒤: 다른 페이지에 위치하고 있었더라도 1페이지로 이동, 입력 폼 초기화
    - 댓글 수정하고 난 뒤: 현재 보고있는 페이지 유지, 입력 폼 초기화
