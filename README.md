@@ -2,6 +2,10 @@
 
 ## 📌 [배포 사이트](https://pre-onboarding-8th-4week-6.netlify.app/)
 
+<div align="center">
+   <img width="500px" src="https://user-images.githubusercontent.com/107424974/214783471-20e63c8a-ee0d-4b44-b20f-6f4d85b558b4.gif"/>
+</div>
+
 </br>
 
 ## Team
